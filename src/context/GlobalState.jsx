@@ -1,10 +1,9 @@
-/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useReducer } from "react";
 import AppReducer from './AppReducer'
 
 const initialState = {
-    transaction: []
+    transactions: []
 }
 
 
@@ -19,11 +18,20 @@ export const GlobalProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
+    const addTransaction = (transaction) => {
+        dispatch({
+            type: "ADD_TRANSACTION",
+            payload: transaction
+        })
+    }
+
+
     return (
         <Context.Provider
             value={
                 {
-                    transactions: state.transactions
+                    transactions: state.transactions,
+                    addTransaction
                 }
             }>
             {children}
