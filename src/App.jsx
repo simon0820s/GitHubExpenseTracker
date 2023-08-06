@@ -4,13 +4,14 @@ import Balance from "./components/Balance"
 import TransactionForm from "./components/transactions/TransactionForm"
 import TransactionList from "./components/transactions/TransactionList"
 import IncomeExpenses from "./components/transactions/IncomeExpenses"
+import ExpenseChart from "./components/ExpenseChart"
 
 
 function App() {
   return (
     <GlobalProvider>
-      <div className="bg-zinc-900 text-white h-screen flex justify-center items-center">
-        <div className="bg-zinc-800 p-10 rounded-lg flex gap-10">
+      <div className="bg-softBlue text-softRed h-screen flex justify-center items-center">
+        <div className="bg-blue p-10 rounded-lg flex gap-10">
 
           <div className="flex flex-col gap-6">
             <Header />
@@ -21,7 +22,8 @@ function App() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col justify-start items-center">
+            <ExpenseChart />
             <TransactionList />
           </div>
 
