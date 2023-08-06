@@ -1,7 +1,8 @@
 import { GlobalProvider } from "./context/GlobalState"
 import Header from "./components/Header"
 import Balance from "./components/Balance"
-import TransactionForm from "./components/TransactionForm"
+import TransactionForm from "./components/transactions/TransactionForm"
+import TransactionList from "./components/transactions/TransactionList"
 
 
 function App() {
@@ -9,8 +10,8 @@ function App() {
     <GlobalProvider>
       <Header/>
       <Balance/>
-      <TransactionForm/>
-      <h1>Hello World</h1>
+      <TransactionForm />
+      <TransactionList />
     </GlobalProvider>
   )
 }
