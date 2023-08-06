@@ -9,8 +9,9 @@ const ExpenseChart = () => {
 
   const totalExpense = transactions.filter((transaction) => transaction.amount < 0).reduce((acc, transaction) => (acc += transaction.amount), 0) * -1
 
-  const expensePercentage = Math.round((totalExpense / totalIncome) * 100)
-  const incomePercentage = 100 - expensePercentage
+  const expensePercentage = (totalExpense / totalIncome) * 100
+  const roundedExpensePercentage = expensePercentage.toFixed(2)
+  const incomePercentage = 100 - roundedExpensePercentage
 
   if (totalIncome > 0) {
     return (
@@ -18,7 +19,7 @@ const ExpenseChart = () => {
       <VictoryPie
         colorScale={["#cc2649", "#66324c"]}
         data={[
-          { x: "Expense", y: expensePercentage },
+          { x: "Expense", y: roundedExpensePercentage },
           { x: "Income", y: incomePercentage },
         ]}
         animate={{
