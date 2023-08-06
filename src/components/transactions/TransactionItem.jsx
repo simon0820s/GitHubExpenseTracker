@@ -10,7 +10,7 @@ export function TransactionItem({ transaction }) {
         <p className="text-sm">{transaction.description}</p>
         <span>${transaction.amount}</span>
       </div>
-      <button onClick={() => {
+      <button className="text-md font-bold cursor-pointer" onClick={() => {
         deleteTransaction(transaction.id)
       }}>
         Delete

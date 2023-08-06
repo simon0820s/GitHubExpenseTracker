@@ -10,8 +10,8 @@ import ExpenseChart from "./components/ExpenseChart"
 function App() {
   return (
     <GlobalProvider>
-      <div className="bg-softBlue text-softRed h-screen flex justify-center items-center">
-        <div className="bg-blue p-10 rounded-lg flex gap-10">
+      <div className="bg-zinc-900 text-softRed lg:h-screen flex justify-center items-center">
+        <div className="bg-zinc-800 p-10 rounded-lg flex flex-col lg:flex-row gap-10">
 
           <div className="flex flex-col gap-6">
             <Header />
@@ -22,7 +22,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-start items-center">
+          <div className="flex flex-col gap-4 justify-start items-center">
             <ExpenseChart />
             <TransactionList />
           </div>
