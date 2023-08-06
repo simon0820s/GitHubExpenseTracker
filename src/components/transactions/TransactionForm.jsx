@@ -12,7 +12,7 @@ function TransactionForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     addTransaction({
-      id: 1,
+      id: window.crypto.randomUUID(),
       description,
       amount
     })
