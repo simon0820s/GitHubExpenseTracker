@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div>Header</div>
+   <h1 className="text-3xl font-bold">Expense Tracker</h1> 
   )
 }
 
