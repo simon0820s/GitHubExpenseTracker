@@ -10,7 +10,7 @@ import ExpenseChart from "./components/ExpenseChart"
 function App() {
   return (
     <GlobalProvider>
-      <div className="bg-zinc-900 text-softRed lg:h-screen flex justify-center items-center">
+      <div className="bg-zinc-900 text-softRed py-16 lg:h-screen flex justify-center items-center">
         <div className="bg-zinc-800 p-10 rounded-lg flex flex-col lg:flex-row gap-10">
 
           <div className="flex flex-col gap-6">
